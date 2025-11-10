@@ -8,7 +8,7 @@ export class UserEntity {
   username: string;
   @Column({ type: 'varchar', unique: true })
   email: string;
-  @Column({ type: 'varchar', length: 50 })
+  @Column({ type: 'char', length: 60 })
   password: string;
   @ManyToOne(() => RoleEntity, (role) => role.user)
   role: RoleEntity;
