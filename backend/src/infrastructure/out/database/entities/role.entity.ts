@@ -7,6 +7,6 @@ export class RoleEntity {
   id: number;
   @Column({ type: 'varchar', length: 20, unique: true })
   name: string;
-  @OneToMany(() => UserEntity, (user) => user.roleID)
+  @OneToMany(() => UserEntity, (user) => user.role)
   user: UserEntity[];
 }
