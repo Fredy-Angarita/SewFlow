@@ -10,7 +10,7 @@ import { AssignmentEntity } from './assignment.entity';
 @Entity('user')
 export class UserEntity {
   @PrimaryGeneratedColumn('uuid')
-  userID: string;
+  id: string;
   @Column({ type: 'varchar', length: 30, unique: true })
   username: string;
   @Column({ type: 'varchar', unique: true })
