@@ -7,6 +7,8 @@ import { SizeEntity } from './entities/size.entity';
 import { ClothingEntity } from './entities/clothing.entity';
 import { AssignmentEntity } from './entities/assignment.entity';
 import { SubmissionEntity } from './entities/submission.entity';
+import { PaymentEntity } from './entities/payment.entity';
+import { HistoryPaymentEntity } from './entities/history.payment.entity';
 
 @Module({
   imports: [
@@ -18,6 +20,8 @@ import { SubmissionEntity } from './entities/submission.entity';
       ClothingEntity,
       AssignmentEntity,
       SubmissionEntity,
+      HistoryPaymentEntity,
+      PaymentEntity,
     ]),
   ],
   providers: [],

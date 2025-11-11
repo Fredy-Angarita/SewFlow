@@ -8,6 +8,8 @@ import { SizeEntity } from '../entities/size.entity';
 import { ClothingEntity } from '../entities/clothing.entity';
 import { AssignmentEntity } from '../entities/assignment.entity';
 import { SubmissionEntity } from '../entities/submission.entity';
+import { HistoryPaymentEntity } from '../entities/history.payment.entity';
+import { PaymentEntity } from '../entities/payment.entity';
 dotenv.config();
 
 export const DataSourceConfig: DataSourceOptions = {
@@ -26,6 +28,8 @@ export const DataSourceConfig: DataSourceOptions = {
     ClothingEntity,
     AssignmentEntity,
     SubmissionEntity,
+    HistoryPaymentEntity,
+    PaymentEntity,
   ],
   migrations: [path.join(__dirname, '../migrations/*.{js,ts}')],
 };

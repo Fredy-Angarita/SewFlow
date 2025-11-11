@@ -3,9 +3,11 @@ import {
   CreateDateColumn,
   Entity,
   ManyToOne,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { AssignmentEntity } from './assignment.entity';
+import { HistoryPaymentEntity } from './history.payment.entity';
 @Entity('submission')
 export class SubmissionEntity {
   @PrimaryGeneratedColumn('uuid')
@@ -18,4 +20,6 @@ export class SubmissionEntity {
   createdAt: Date;
   @ManyToOne(() => AssignmentEntity, (assignment) => assignment.submissions)
   assignment: AssignmentEntity;
+  @OneToMany(() => HistoryPaymentEntity, (history) => history.submission)
+  historyPayments: HistoryPaymentEntity[];
 }
