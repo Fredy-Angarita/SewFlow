@@ -1,5 +1,12 @@
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 import { SizeEntity } from './size.entity';
+import { AssignmentEntity } from './assignment.entity';
 @Entity('clothing')
 export class ClothingEntity {
   @PrimaryGeneratedColumn('uuid')
@@ -14,4 +21,6 @@ export class ClothingEntity {
   production_cost: number;
   @ManyToOne(() => SizeEntity, (size) => size.clothings)
   size: SizeEntity;
+  @OneToMany(() => AssignmentEntity, (assignment) => assignment.clothing)
+  assignments: AssignmentEntity[];
 }

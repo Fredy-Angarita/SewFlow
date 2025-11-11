@@ -6,6 +6,8 @@ import { RoleEntity } from '../entities/role.entity';
 import { UserEntity } from '../entities/user.entity';
 import { SizeEntity } from '../entities/size.entity';
 import { ClothingEntity } from '../entities/clothing.entity';
+import { AssignmentEntity } from '../entities/assignment.entity';
+import { SubmissionEntity } from '../entities/submission.entity';
 dotenv.config();
 
 export const DataSourceConfig: DataSourceOptions = {
@@ -17,7 +19,14 @@ export const DataSourceConfig: DataSourceOptions = {
   password: process.env.DB_PASSWORD,
   synchronize: false,
   logging: false,
-  entities: [RoleEntity, UserEntity, SizeEntity, ClothingEntity],
+  entities: [
+    RoleEntity,
+    UserEntity,
+    SizeEntity,
+    ClothingEntity,
+    AssignmentEntity,
+    SubmissionEntity,
+  ],
   migrations: [path.join(__dirname, '../migrations/*.{js,ts}')],
 };
 

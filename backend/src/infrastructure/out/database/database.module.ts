@@ -5,6 +5,8 @@ import { UserEntity } from './entities/user.entity';
 import { RoleEntity } from './entities/role.entity';
 import { SizeEntity } from './entities/size.entity';
 import { ClothingEntity } from './entities/clothing.entity';
+import { AssignmentEntity } from './entities/assignment.entity';
+import { SubmissionEntity } from './entities/submission.entity';
 
 @Module({
   imports: [
@@ -14,6 +16,8 @@ import { ClothingEntity } from './entities/clothing.entity';
       RoleEntity,
       SizeEntity,
       ClothingEntity,
+      AssignmentEntity,
+      SubmissionEntity,
     ]),
   ],
   providers: [],
