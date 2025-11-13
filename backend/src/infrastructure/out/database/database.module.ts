@@ -9,6 +9,7 @@ import { AssignmentEntity } from './entities/assignment.entity';
 import { SubmissionEntity } from './entities/submission.entity';
 import { PaymentEntity } from './entities/payment.entity';
 import { HistoryPaymentEntity } from './entities/history.payment.entity';
+import { UserRepository } from './repository/user.repository';
 
 @Module({
   imports: [
@@ -24,7 +25,7 @@ import { HistoryPaymentEntity } from './entities/history.payment.entity';
       PaymentEntity,
     ]),
   ],
-  providers: [],
+  providers: [UserRepository],
   exports: [TypeOrmModule],
 })
 export class DatabaseModule {}
